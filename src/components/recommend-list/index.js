@@ -10,7 +10,7 @@ function RecommendList(props) {
         {
           props.recommendList.map((item, index) => {
             return (
-              <ListItem key={item.id + index}>
+              <ListItem key={index}>
                 <div className="img_wrapper">
                   <div className="decorate"></div>
                   <img src={item.picUrl + "?param=300*300"} width="100%" height="100%" alt=""/>

@@ -1,6 +1,8 @@
 import React from "react";
 import Slider from '../../components/slider/index'
 import RecommendList from '../../components/recommend-list/index'
+import Scroll from '../../components/scroll/index'
+import Content from "./style";
 
 function Recommend(props) {
   const bannerList = [1, 2, 3, 4].map(item => {
@@ -19,10 +21,15 @@ function Recommend(props) {
   });
 
   return (
-    <div>
-      <Slider bannerList={bannerList}></Slider>
-      <RecommendList recommendList={recommendList}></RecommendList>
-    </div>
+    <Content>
+      <Scroll className="list">
+        {/*<div className="before"></div>*/}
+        <div>
+          <Slider bannerList={bannerList}></Slider>
+          <RecommendList recommendList={recommendList}></RecommendList>
+        </div>
+      </Scroll>
+    </Content>
   )
 }
 
