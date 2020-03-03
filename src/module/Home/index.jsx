@@ -1,7 +1,7 @@
 import React from "react";
 import {renderRoutes} from "react-router-config";
 import {Top, Tab, TabItem} from "./style";
-import {NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom"; //路由跳转
 
 function Home(props) {
   const {route} = props;
@@ -17,7 +17,6 @@ function Home(props) {
         <NavLink to="/singers" activeClassName="selected"><TabItem><span> 歌手 </span></TabItem></NavLink>
         <NavLink to="/rank" activeClassName="selected"><TabItem><span> 排行版 </span></TabItem></NavLink>
       </Tab>
-      {/*<div>Home</div>*/}
       {/*renderRoutes只能渲染一层路由，需要在home中再调用一次*/}
       {renderRoutes(route.routes)}
     </div>
